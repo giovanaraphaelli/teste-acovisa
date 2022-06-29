@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste- Açovisa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <nav class="white z-depth-1">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo"> <img src="./img/logo.png" alt=""></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                <i class="material-icons black-text">menu</i>
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="active"><a class="black-text" href="formulário-cadastro.html">Formulário de Cadastro</a></li>
+                <li><a class="black-text" href="formulário-endereco.html">Formulário de Endereço</a></li>
+            </ul>
+        </div>
+    </nav>
+    <ul id="mobile-demo" class="sidenav">
+        <li class="active"><a href="formulário-cadastro.html">Formulário de Cadastro</a></li>
+        <li><a href="formulário-endereco.html">Formulário de Endereço</a></li>
+    </ul>
+    <main class="container">
+        <div class="row">
+            <h1>Formulário de Cadastro</h1>
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="" id="first_name" type="text" class="validate">
+                        <label for="first_name">Nome</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input placeholder="" id="last_name" type="text" class="validate">
+                        <label for="last_name">Sobrenome</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="" id="date-birth" type="date" class="validate">
+                        <label for="date-birth">Data de Nascimento</label>
+                        <span class="helper-text" data-error="Formato incorreto!"></span>
+                    </div>
+                    <div class="input-field col s6">
+                        <input placeholder="" id="age" type="number" class="validate">
+                        <label for="age">Idade</label>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="" id="cpf" type="number" class="validate">
+                        <label for="cpf">CPF</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input placeholder="" id="phone" type="number" class="validate">
+                        <label for="phone">Celular</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="" id="email" type="email" class="validate">
+                        <label data-error="Email Inválido!" for="email">Email</label>
+                    </div>
+                </div>
+                <button class="btn waves-effect" type="submit" name="action">Enviar
+                    <i class="material-icons right">send</i>
+                </button>
+
+            </form>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/data-nascimento.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+
+    </script>
+</body>
+
+</html>

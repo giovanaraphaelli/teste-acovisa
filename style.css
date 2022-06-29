@@ -1,0 +1,19 @@
+h1 {
+  font-size: 2rem;
+  color: #003160;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.brand-logo {
+  width: 150px;
+}
+
+.brand-logo img {
+  width: 100%;
+  padding-top: 10px;
+}
+
+button {
+  background-color: #003160 !important;
+}
