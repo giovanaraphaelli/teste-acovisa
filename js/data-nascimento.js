@@ -1,4 +1,4 @@
-function addDateBirth() {
+function addAge() {
   const clearAge = () => {
     document.getElementById('age').value = '';
   };
@@ -18,4 +18,4 @@ function addDateBirth() {
   });
 }
 
-addDateBirth();
+addAge();
