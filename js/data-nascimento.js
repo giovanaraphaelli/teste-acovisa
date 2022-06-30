@@ -1,18 +1,19 @@
 function addDateBirth() {
-  const dateBirth = document.getElementById('date-birth');
-  const age = document.getElementById('age');
-  const date = new Date();
-  const year = date.getFullYear();
+  const clearAge = () => {
+    document.getElementById('age').value = '';
+  };
 
-  dateBirth.addEventListener('focusout', () => {
-    var [yearBirth, mouthBirth, dayBirth] = dateBirth.value
-      .split('-')
-      .map(Number);
+  document.getElementById('date-birth').addEventListener('focusout', () => {
+    clearAge();
+    const dateBirth = document.getElementById('date-birth').value;
+    const [yearBirth, mouthBirth, dayBirth] = dateBirth.split('-').map(Number);
+    const date = new Date();
+    const year = date.getFullYear();
 
-    ageCurrent = year - yearBirth;
+    const ageCurrent = year - yearBirth;
 
     if (yearBirth !== 0) {
-      age.value = ageCurrent;
+      document.getElementById('age').value = ageCurrent;
     }
   });
 }
